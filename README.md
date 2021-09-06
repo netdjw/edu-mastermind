@@ -78,7 +78,6 @@ A játék vizuálisan valami ehhez hasonló felülettel bír:
 
 ## A feladat értékelése
 
-|---|---|
 | Elvárás | Értékelés |
 |---|---|
 | Hibásan működő kód | 💩 |
