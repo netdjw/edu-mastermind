@@ -1,0 +1,407 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.js",
+        "*.ts"
+      ],
+      "excludedFiles": [
+        "*.spec.ts"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "project": [
+          // "./angular/tsconfig.app.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:prettier/recommended",
+        "prettier"
+      ],
+      "plugins": [
+        "prettier",
+        "eslint-plugin-no-null",
+        "eslint-plugin-unicorn"
+      ],
+      "rules": {
+        "@typescript-eslint/array-type": [
+          2,
+          {
+            "default": "generic"
+          }
+        ],
+        "@typescript-eslint/no-extraneous-class": [
+          2,
+          {
+            "allowWithDecorator": true,
+            "allowStaticOnly": true
+          }
+        ],
+        "@typescript-eslint/await-thenable": 2,
+        "@typescript-eslint/ban-types": [
+          2,
+          {
+            "types": {
+              "Function": false
+            },
+            "extendDefaults": true
+          }
+        ],
+        "@typescript-eslint/comma-dangle": 0,
+        "@typescript-eslint/consistent-type-definitions": 2,
+        "@typescript-eslint/dot-notation": 0,
+        "@typescript-eslint/explicit-function-return-type": 2,
+        "@typescript-eslint/explicit-member-accessibility": [
+          2,
+          {
+            "accessibility": "no-public"
+          }
+        ],
+        "@typescript-eslint/lines-between-class-members": 2,
+        "@typescript-eslint/indent": 0,
+        "@typescript-eslint/member-ordering": [
+          2,
+          {
+            "default": [
+              // Index signature
+              "signature",
+              // Fields
+              "private-static-field",
+              "protected-static-field",
+              "public-static-field",
+              "private-decorated-field",
+              "protected-decorated-field",
+              "public-decorated-field",
+              "private-instance-field",
+              "protected-instance-field",
+              "public-instance-field",
+              "private-abstract-field",
+              "protected-abstract-field",
+              "public-abstract-field",
+              // Constructors
+              "constructor",
+              // Methods
+              "public-static-method",
+              "protected-static-method",
+              "private-static-method",
+              "public-decorated-method",
+              "protected-decorated-method",
+              "private-decorated-method",
+              "public-instance-method",
+              "protected-instance-method",
+              "private-instance-method",
+              "public-abstract-method",
+              "protected-abstract-method",
+              "private-abstract-method"
+            ]
+          }
+        ],
+        "@typescript-eslint/no-explicit-any": [
+          2,
+          {
+            "fixToUnknown": false, // Ezt majd rakjuk vissza, ha már nem csesz el semmit
+            "ignoreRestArgs": true
+          }
+        ],
+        "@typescript-eslint/no-floating-promises": 0,
+        "@typescript-eslint/no-for-in-array": 2,
+        "@typescript-eslint/no-require-imports": 2,
+        "@typescript-eslint/no-this-alias": 2,
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": 2,
+        "@typescript-eslint/no-unnecessary-type-arguments": 2,
+        "@typescript-eslint/no-unnecessary-type-assertion": 2,
+        "@typescript-eslint/no-var-requires": 2,
+        "@typescript-eslint/prefer-includes": 2,
+        "@typescript-eslint/prefer-readonly": 2,
+        "@typescript-eslint/promise-function-async": 2,
+        "@typescript-eslint/require-await": 2,
+        "@typescript-eslint/restrict-plus-operands": 2,
+        "@typescript-eslint/naming-convention": [
+          2,
+          {
+            "selector": "class",
+            "format": [
+              "PascalCase"
+            ],
+            "modifiers": [
+              "abstract"
+            ],
+            "suffix": [
+              "Abstract"
+            ]
+          },
+          {
+            "selector": "interface",
+            "format": [
+              "PascalCase"
+            ],
+            "suffix": [
+              "Interface"
+            ]
+          },
+          {
+            "selector": "enum",
+            "format": [
+              "PascalCase"
+            ],
+            "suffix": [
+              "Enum"
+            ]
+          },
+          {
+            "selector": "variable",
+            "format": [
+              "camelCase"
+            ]
+          },
+          {
+            "selector": "classProperty",
+            "modifiers": [
+              "private"
+            ],
+            "format": [
+              "camelCase",
+              "snake_case"
+            ],
+            "leadingUnderscore": "allow"
+          },
+          {
+            "selector": "variable",
+            "types": [
+              "boolean"
+            ],
+            "format": [
+              "PascalCase"
+            ],
+            "prefix": [
+              "are",
+              "is",
+              "should",
+              "would",
+              "could",
+              "has",
+              "have",
+              "had",
+              "was",
+              "were",
+              "can",
+              "do",
+              "does",
+              "did",
+              "will",
+              "need"
+            ]
+          },
+          // {
+          //   "selector": "variable",
+          //   "modifiers": [
+          //     "exported",
+          //     "const"
+          //   ],
+          //   "format": [
+          //     "UPPER_CASE"
+          //   ],
+          //   "ex"
+          // },
+          {
+            "selector": "variable",
+            "modifiers": [
+              "exported",
+              "const"
+            ],
+            "format": [
+              "snake_case",
+              "strictCamelCase"
+            ]
+          },
+          {
+            "selector": "parameter",
+            "modifiers": [
+              "unused"
+            ],
+            "format": [
+              "camelCase"
+            ],
+            "leadingUnderscore": "allow"
+          }
+        ],
+        "@typescript-eslint/no-unused-expressions": 0,
+        "@typescript-eslint/unbound-method": 0,
+        "arrow-parens": 0,
+        "brace-style": 0,
+        "class-methods-use-this": 0,
+        "comma-dangle": 0,
+        "complexity": [
+          2,
+          {
+            "max": 20
+          }
+        ],
+        "default-case": 2,
+        "id-blacklist": 0,
+        "id-match": 0,
+        "import/no-default-export": 0,
+        "import/prefer-default-export": 0, // if using airbnb
+        "import/no-extraneous-dependencies": 2,
+        "import/no-unassigned-import": 0,
+        "import/order": [
+          1,
+          {
+            "groups": [],
+            "pathGroups": [
+              {
+                "pattern": "~/**",
+                "group": "internal"
+              }
+            ]
+          }
+        ],
+        "lines-between-class-members": 2,
+        "max-classes-per-file": [
+          2,
+          1
+        ],
+        "max-depth": [
+          2,
+          3
+        ],
+        "max-lines": [
+          2,
+          500
+        ],
+        "prettier/prettier": 2,
+        "max-len": [
+          2,
+          {
+            "code": 100,
+            "tabWidth": 4,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreComments": true,
+            "ignoreUrls": true,
+            "ignorePattern": "^import*|^export*"
+          }
+        ],
+        "newline-per-chained-call": 2,
+        "no-duplicate-case": 2,
+        "no-duplicate-imports": 2,
+        "no-extra-bind": 2,
+        "no-extra-boolean-cast": 0,
+        "no-invalid-this": 0,
+        "no-multiple-empty-lines": [
+          2,
+          {
+            "max": 1
+          }
+        ],
+        "no-new-func": 2,
+        "no-null/no-null": 0,
+        "no-param-reassign": 2,
+        "no-plusplus": 0,
+        "no-prototype-builtins": 1,
+        "no-redeclare": 2,
+        "no-restricted-syntax": [
+          2,
+          "WithStatement"
+        ],
+        "no-return-await": 2,
+        "no-sequences": 2,
+        "no-sparse-arrays": 2,
+        "no-template-curly-in-string": 2,
+        "no-underscore-dangle": 0,
+        "no-unused-expressions": [
+          2,
+          {
+            "allowShortCircuit": true,
+            "allowTernary": true
+          }
+        ],
+        "no-useless-constructor": 0,
+        "no-void": 2,
+        "no-constant-condition": [
+          2,
+          {
+            "checkLoops": false
+          }
+        ],
+        "padding-line-between-statements": [
+          2,
+          {
+            "blankLine": "always",
+            "prev": "*",
+            "next": "return"
+          },
+          {
+            "blankLine": "always",
+            "prev": "*",
+            "next": "block-like"
+          },
+          {
+            "blankLine": "always",
+            "prev": "block-like",
+            "next": "*"
+          },
+          {
+            "blankLine": "always",
+            "prev": [
+              "const",
+              "let"
+            ],
+            "next": "*"
+          },
+          {
+            "blankLine": "never",
+            "prev": "*",
+            "next": [
+              "const",
+              "let"
+            ]
+          }
+        ],
+        "prefer-arrow/prefer-arrow-functions": 0,
+        "prefer-object-spread": 2,
+        "prefer-template": 2,
+        "radix": 0,
+        "space-in-parens": [
+          2,
+          "never"
+        ],
+        "valid-typeof": 2,
+        "yoda": 2
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        // "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/template/accessibility-alt-text": "warn",
+        "@angular-eslint/template/accessibility-elements-content": "warn",
+        "@angular-eslint/template/accessibility-label-for": "warn",
+        "@angular-eslint/template/no-positive-tabindex": "warn",
+        "@angular-eslint/template/accessibility-table-scope": "warn",
+        "@angular-eslint/template/accessibility-valid-aria": "warn",
+        "@angular-eslint/template/conditional-complexity": 2,
+        "@angular-eslint/template/cyclomatic-complexity": [
+          2,
+          {
+            "maxComplexity": 10
+          }
+        ],
+        "@angular-eslint/template/i18n": 0,
+        "@angular-eslint/template/no-call-expression": 2
+      }
+    },
+  ]
+}
