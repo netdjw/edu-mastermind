@@ -1,0 +1,29 @@
+{
+  "name": "mastermind",
+  "version": "1.0.0",
+  "scripts": {},
+  "dependencies": {
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.1.0"
+  },
+  "devDependencies": {
+    "@angular-eslint/builder": "^12.3",
+    "@angular-eslint/eslint-plugin": "^12.3",
+    "@angular-eslint/eslint-plugin-template": "^12.3",
+    "@angular-eslint/schematics": "^12.3",
+    "@angular-eslint/template-parser": "^12.3",
+    "eslint": "^7.31",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^30.7.6",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-prefer-arrow": "^1.2.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unicorn": "^37.0.1",
+    "prettier": "^2.4.1",
+    "@typescript-eslint/eslint-plugin": "^4.28",
+    "@typescript-eslint/parser": "^4.28",
+    "ts-node": "^8.10.2",
+    "typescript": "4.1.5"
+  }
+}
