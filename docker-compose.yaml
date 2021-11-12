@@ -1,0 +1,16 @@
+version: "3"
+services:
+  httpd:
+    image: 'nginx:stable-alpine'
+    ports:
+      - '80:80'
+    volumes:
+      - ./src:/var/www/html
+      - ./.docker-config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+
+  npm:
+    image: node:14-alpine
+    working_dir: /var/www/html
+    entrypoint: ["npm"]
+    volumes:
+      - ./:/var/www/html
